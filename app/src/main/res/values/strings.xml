@@ -1,0 +1,56 @@
+<resources>
+    <!-- Values for all Activities -->
+    <string name="sans_serif_condensed">sans-serif-condensed</string>
+
+   <!-- Main Activity attributes. -->
+    <string name="app_name">"QUIZ Wiedźmin "</string>
+    <string name="start">Start"</string>
+
+    <!-- Result Activity attributes. -->
+    <string name="text_example">Niespodzianka.</string>
+    <string name="once_again">jeszcze raz?</string>
+    <string name="image_description_resultActivity">The Witcher logo.</string>
+
+    <!-- Quiz Activity attributes. -->
+    <string name="image_description_quizActivity">The Witcher.</string>
+    <string name="first_question">1. Jak ma na imię główny bohater?</string>
+    <string name="first_question_true">Geralt</string>
+    <string name="first_question_false1">Jaskier</string>
+    <string name="first_question_false2">Dijkstra</string>
+    <string name="second_question">2.Kto jest autorem sagi Wiedźmin?</string>
+    <string name="second_question_true">Andrzej Sapkowski</string>
+    <string name="second_question_false1">Krzysztof Sieczkowski</string>
+    <string name="second_question_false2">Katarzyna Sienkiewicz</string>
+    <string name="third_question">3. Z jakiej szkoły wywodził się Geralt?</string>
+    <string name="third_question_true">Wilka</string>
+    <string name="third_question_false1">Żmiji</string>
+    <string name="third_question_false2">Niedźwiedzia</string>
+    <string name="fourth_question">4. Kto był przyszywaną córką Geralta?</string>
+    <string name="name_hint">Imie</string>
+    <string name="fifth_question">5. Jakie studio stworzyło gry o Wiedźminie?</string>
+    <string name="fifth_question_true">CD RED Project</string>
+    <string name="fifth_question_false1">DVD RED Project</string>
+    <string name="fifth_question_false2">DVD RED Project</string>
+    <string name="sixth_question">6. Ile mieczy nosił na plecach Geralt?</string>
+    <string name="sixth_question_true">2</string>
+    <string name="sixth_question_false1">3</string>
+    <string name="sixth_question_false2">1</string>
+    <string name="seventh_question">7. Które miasta występują w świecie Wiedźmina?</string>
+    <string name="seventh_question_true1">Wyzima</string>
+    <string name="seventh_question_true2">Oxenfurt</string>
+    <string name="seventh_question_false">Kingsberg</string>
+    <string name="eighth_question">8. Ile książek liczy saga o Wiedźminie?</string>
+    <string name="eighth_question_true">8</string>
+    <string name="eighth_question_false1">6</string>
+    <string name="eighth_question_false2">7</string>
+    <string name="ninth_question">9. Kto był prawdziwym ojcem Ciri?</string>
+    <string name="ninth_question_false1">Sigismund Dijkstra</string>
+    <string name="ninth_question_true">Emhyr Var Emreis</string>
+    <string name="ninth_question_false2">9. Kto był prawdziwym ojcem Ciri?</string>
+    <string name="tenth_question">10. Jak nazywały się wszystkie konie Geralta?</string>
+    <string name="tenth_question_true">Płotka</string>
+    <string name="tenth_question_false1">Szkapa</string>
+    <string name="tenth_question_false2">Okoń</string>
+    <string name="check_result">Sprawdź wynik!</string>
+
+</resources>

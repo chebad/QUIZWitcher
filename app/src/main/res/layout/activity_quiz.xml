@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizwitcher.QuizActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_description_quizActivity"
+        android:scaleType="centerCrop"
+        android:src="@drawable/geralt_witcher" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransparentBlack">
+            <!-- TITLE  -->
+            <TextView
+                android:id="@+id/quiz_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fontFamily="@string/sans_serif_condensed"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_36"
+                android:textStyle="bold" />
+            <!-- 1 Question  -->
+            <LinearLayout
+                android:id="@+id/layout_question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quiz_tittle"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/first_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked1"
+                        android:text="@string/first_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked1"
+                        android:text="@string/first_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked1"
+                        android:text="@string/first_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 2 Question  -->
+            <LinearLayout
+                android:id="@+id/layout_question_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_1"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/second_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked2"
+                        android:text="@string/second_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked2"
+                        android:text="@string/second_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked2"
+                        android:text="@string/second_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 3 Question  -->
+            <LinearLayout
+                android:id="@+id/layout_question_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_2"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/third_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked3"
+                        android:text="@string/third_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked3"
+                        android:text="@string/third_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked3"
+                        android:text="@string/third_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 4 Question  -->
+            <LinearLayout
+                android:id="@+id/layout_question_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fourth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/name_hint"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorTextPrimary" />
+
+            </LinearLayout>
+            <!-- 5 Question  -->
+            <LinearLayout
+                android:id="@+id/layout_question_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_4"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/fifth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked5"
+                        android:text="@string/fifth_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked5"
+                        android:text="@string/fifth_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked5"
+                        android:text="@string/fifth_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 6 Question -->
+            <LinearLayout
+                android:id="@+id/layout_question_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_5"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/sixth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked6"
+                        android:text="@string/sixth_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked6"
+                        android:text="@string/sixth_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked6"
+                        android:text="@string/sixth_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 7 Question -->
+            <LinearLayout
+                android:id="@+id/layout_question_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_6"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seventh_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/qustion7_Wyzima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seventh_question_true1"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/qustion7_Oxenfurt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seventh_question_true2"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/qustion7_Kingsberg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seventh_question_false"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 8 Question -->
+            <LinearLayout
+                android:id="@+id/layout_question_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_7"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/eighth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked8"
+                        android:text="@string/eighth_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked8"
+                        android:text="@string/eighth_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked8"
+                        android:text="@string/eighth_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 9 Question -->
+            <LinearLayout
+                android:id="@+id/layout_question_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_8"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/ninth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked9"
+                        android:text="@string/ninth_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked9"
+                        android:text="@string/ninth_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked9"
+                        android:text="@string/ninth_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 10 Question -->
+            <LinearLayout
+                android:id="@+id/layout_question_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_9"
+                android:orientation="vertical"
+                android:padding="@dimen/quizActivity_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tenth_question"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/question10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked10"
+                        android:text="@string/tenth_question_true"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked10"
+                        android:text="@string/tenth_question_false1"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked10"
+                        android:text="@string/tenth_question_false2"
+                        android:textColor="@color/colorTextPrimary" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_question_10"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gradient_box"
+                android:onClick="submitQuestion"
+                android:paddingBottom="@dimen/quizActivity_paddingBottom"
+                android:text="@string/check_result"
+                android:textColor="@color/colorTextPrimary" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
