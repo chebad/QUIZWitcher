@@ -6,6 +6,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="textSize_30">30sp</dimen>
     <dimen name="text_size_36">36sp</dimen>
+    <dimen name="paddingBottom_Button">20dp</dimen>
 
     <!-- Main Activity attributes. -->
     <dimen name="mainActivity_tittle_size">38sp</dimen>
@@ -16,7 +17,8 @@
 
     <!-- Quiz Activity attributes.-->
     <dimen name="quizActivity_padding">5dp</dimen>
-    <dimen name="quizActivity_paddingBottom">20dp</dimen>
+    <dimen name="quizActivity_margin_button">30dp</dimen>
+    <dimen name="quizActivity_maring_start_left">25dp</dimen>
 
     <!-- Gradient box attributes.-->
     <dimen name="bottom_top">20dp</dimen>

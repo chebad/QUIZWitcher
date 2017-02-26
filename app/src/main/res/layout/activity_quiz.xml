@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,8 +20,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorTransparentBlack">
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparentBlack"
+            android:paddingBottom="@dimen/paddingBottom_Button">
             <!-- TITLE  -->
             <TextView
                 android:id="@+id/quiz_tittle"
@@ -43,11 +45,8 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/first_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/first_question" />
 
                 <RadioGroup
                     android:id="@+id/question1"
@@ -55,26 +54,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked1"
                         android:text="@string/first_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked1"
                         android:text="@string/first_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked1"
                         android:text="@string/first_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 2 Question  -->
@@ -87,37 +83,32 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/second_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+
+                    style="@style/MyTextView"
+                    android:text="@string/second_question" />
 
                 <RadioGroup
                     android:id="@+id/question2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked2"
                         android:text="@string/second_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked2"
                         android:text="@string/second_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked2"
                         android:text="@string/second_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 3 Question  -->
@@ -130,11 +121,8 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/third_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/third_question" />
 
                 <RadioGroup
                     android:id="@+id/question3"
@@ -142,26 +130,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked3"
                         android:text="@string/third_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked3"
                         android:text="@string/third_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked3"
                         android:text="@string/third_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 4 Question  -->
@@ -173,17 +158,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fourth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+
+                    style="@style/MyTextView"
+                    android:text="@string/fourth_question" />
 
                 <EditText
                     android:id="@+id/edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/quizActivity_maring_start_left"
+                    android:layout_marginStart="@dimen/quizActivity_maring_start_left"
                     android:hint="@string/name_hint"
                     android:textColor="@color/colorTextPrimary"
                     android:textColorHint="@color/colorTextPrimary" />
@@ -199,11 +183,9 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/fifth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+
+                    style="@style/MyTextView"
+                    android:text="@string/fifth_question" />
 
                 <RadioGroup
                     android:id="@+id/question5"
@@ -211,26 +193,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked5"
                         android:text="@string/fifth_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked5"
                         android:text="@string/fifth_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked5"
                         android:text="@string/fifth_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 6 Question -->
@@ -243,11 +222,9 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/sixth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+
+                    style="@style/MyTextView"
+                    android:text="@string/sixth_question" />
 
                 <RadioGroup
                     android:id="@+id/question6"
@@ -255,26 +232,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked6"
                         android:text="@string/sixth_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked6"
                         android:text="@string/sixth_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked6"
                         android:text="@string/sixth_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 7 Question -->
@@ -287,40 +261,31 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/seventh_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/seventh_question" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <CheckBox
+                    <android.support.v7.widget.AppCompatCheckBox
                         android:id="@+id/qustion7_Wyzima"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/MyCheckBox"
                         android:text="@string/seventh_question_true1"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textStyle="bold" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <CheckBox
+                    <android.support.v7.widget.AppCompatCheckBox
                         android:id="@+id/qustion7_Oxenfurt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/MyCheckBox"
                         android:text="@string/seventh_question_true2"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textStyle="bold" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <CheckBox
+                    <android.support.v7.widget.AppCompatCheckBox
                         android:id="@+id/qustion7_Kingsberg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/MyCheckBox"
                         android:text="@string/seventh_question_false"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textStyle="bold" />
+                        app:buttonTint="@color/colorAccent" />
                 </LinearLayout>
             </LinearLayout>
             <!-- 8 Question -->
@@ -333,11 +298,8 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/eighth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/eighth_question" />
 
                 <RadioGroup
                     android:id="@+id/question8"
@@ -345,26 +307,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked8"
                         android:text="@string/eighth_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked8"
                         android:text="@string/eighth_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked8"
                         android:text="@string/eighth_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 9 Question -->
@@ -377,11 +336,8 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/ninth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/ninth_question" />
 
                 <RadioGroup
                     android:id="@+id/question9"
@@ -389,26 +345,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked9"
                         android:text="@string/ninth_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked9"
                         android:text="@string/ninth_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked9"
                         android:text="@string/ninth_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
             <!-- 10 Question -->
@@ -421,11 +374,8 @@
                 android:padding="@dimen/quizActivity_padding">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tenth_question"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold" />
+                    style="@style/MyTextView"
+                    android:text="@string/tenth_question" />
 
                 <RadioGroup
                     android:id="@+id/question10"
@@ -433,26 +383,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked10"
                         android:text="@string/tenth_question_true"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked10"
                         android:text="@string/tenth_question_false1"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/MyRadioButton"
                         android:onClick="onRadioButtonClicked10"
                         android:text="@string/tenth_question_false2"
-                        android:textColor="@color/colorTextPrimary" />
+                        app:buttonTint="@color/colorAccent" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -462,9 +409,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layout_question_10"
                 android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/quizActivity_margin_button"
                 android:background="@drawable/gradient_box"
                 android:onClick="submitQuestion"
-                android:paddingBottom="@dimen/quizActivity_paddingBottom"
                 android:text="@string/check_result"
                 android:textColor="@color/colorTextPrimary" />
         </RelativeLayout>

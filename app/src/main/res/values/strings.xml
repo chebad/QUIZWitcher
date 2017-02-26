@@ -26,7 +26,7 @@
     <string name="third_question_false1">Żmiji</string>
     <string name="third_question_false2">Niedźwiedzia</string>
     <string name="fourth_question">4. Kto był przyszywaną córką Geralta?</string>
-    <string name="name_hint">Imie</string>
+    <string name="name_hint">Imię: np. Jennefer</string>
     <string name="fifth_question">5. Jakie studio stworzyło gry o Wiedźminie?</string>
     <string name="fifth_question_true">CD RED Project</string>
     <string name="fifth_question_false1">DVD RED Project</string>
@@ -46,7 +46,7 @@
     <string name="ninth_question">9. Kto był prawdziwym ojcem Ciri?</string>
     <string name="ninth_question_false1">Sigismund Dijkstra</string>
     <string name="ninth_question_true">Emhyr Var Emreis</string>
-    <string name="ninth_question_false2">9. Kto był prawdziwym ojcem Ciri?</string>
+    <string name="ninth_question_false2">Vernon Roche</string>
     <string name="tenth_question">10. Jak nazywały się wszystkie konie Geralta?</string>
     <string name="tenth_question_true">Płotka</string>
     <string name="tenth_question_false1">Szkapa</string>

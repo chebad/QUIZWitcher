@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 /**
  * Created by Damian on 21/02/2017.
- *
  */
 
 public class ResultActivity extends Activity {
@@ -20,21 +19,24 @@ public class ResultActivity extends Activity {
         setContentView(R.layout.activity_result);
 
         Intent i = getIntent();
-        int intValue = i.getIntExtra("ResultValue",0);
-        int intVal = i.getIntExtra("TableOfGoodAnswers",0);
-        int procVa = intValue*10;
+        //==  Variables received from QuizActivity (same name as variables in previous activity)  ==
+        int resultValue = i.getIntExtra("ResultValue", 0);
+        int tableAnswersLength = i.getIntExtra("TableOfGoodAnswers", 0);
+        int percentValue = resultValue * 10;
+        //==========================================================================================
         TextView tv = (TextView) findViewById(R.id.text_view_result);
-        tv.setText("Twój wynik to: " + intValue + "/" + intVal +
-                ". \nZdobyłeś " + procVa + "%" );
-        Toast.makeText(getApplicationContext(),intValue + "/" + intVal,Toast.LENGTH_SHORT).show();
+        tv.setText("Twój wynik to: " + resultValue + "/" + tableAnswersLength +
+                ". \nZdobyłeś " + percentValue + "%");
+        Toast.makeText(getApplicationContext(), resultValue + "/" + tableAnswersLength, Toast.LENGTH_SHORT).show();
     }
 
     /**
-     * Method reset the quiz and back to previous Activity.
+     * Method reset the quiz and back to main Activity.
+     *
      * @param view The view.
      */
-    public void resetQuiz(View view){
-        Intent i = new Intent(this, QuizActivity.class);
+    public void resetQuiz(View view) {
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 }
