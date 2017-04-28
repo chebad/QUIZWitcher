@@ -20,41 +20,10 @@ import android.widget.RadioGroup;
 
 public class QuizActivity extends Activity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_quiz);
-    }
-
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        //Save the state of two variables when screen rotate.
-        savedInstanceState.putBooleanArray("ArrayOfGoodAnswers", tableAnswers);
-        savedInstanceState.putInt("ResultValue", resultValue);
-
-    }
-
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        //Write saved values to variables.
-        tableAnswers = savedInstanceState.getBooleanArray("ArrayOfGoodAnswers");
-        resultValue = savedInstanceState.getInt("ResultValue");
-    }
-
-
-    //===========================   Used variables for this quiz.    ===============================
-
     public int resultValue = 0;
-
     //10 elements for 10 questions.
     public boolean[] tableAnswers = {false, false, false, false, false,
             false, false, false, false, false};
-
     private String[] tabTrueAnswers = {
             "Geralt",
             "Andrzej Sapkowski",
@@ -65,6 +34,33 @@ public class QuizActivity extends Activity {
             "Emhyr Var Emreis",
             "Płotka"
     };
+
+
+    //===========================   Used variables for this quiz.    ===============================
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_quiz);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        //Save the state of two variables when screen rotate.
+        savedInstanceState.putBooleanArray("ArrayOfGoodAnswers", tableAnswers);
+        savedInstanceState.putInt("ResultValue", resultValue);
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        //Write saved values to variables.
+        tableAnswers = savedInstanceState.getBooleanArray("ArrayOfGoodAnswers");
+        resultValue = savedInstanceState.getInt("ResultValue");
+    }
 
     //==============================================================================================
 
@@ -78,11 +74,7 @@ public class QuizActivity extends Activity {
     private void checkIt(String trueAnswer, int questionId, int i) {
         RadioGroup q1 = (RadioGroup) findViewById(questionId);
         String s1 = ((RadioButton) findViewById(q1.getCheckedRadioButtonId())).getText().toString();
-        if (s1.equals(trueAnswer)) {
-            tableAnswers[i - 1] = true;
-        } else {
-            tableAnswers[i - 1] = false;
-        }
+        tableAnswers[i - 1] = s1.equals(trueAnswer);
     }
 
     //==============================================================================================
@@ -180,9 +172,7 @@ public class QuizActivity extends Activity {
     public void onRadioButtonClicked10(View view) {
         checkIt(tabTrueAnswers[7], R.id.question10, 10);
     }
-
     //==============================================================================================
-
     /**
      * Method checked obtain score and what user wrote in EditText label. Method display the massage
      * into Toast view.

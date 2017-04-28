@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 /**
  * Created by Damian on 21/02/2017.
+ *
  */
 
 public class ResultActivity extends Activity {
